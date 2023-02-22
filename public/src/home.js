@@ -39,7 +39,7 @@ function getMostCommonGenres(books) {
     };
     result.push(resultObj);
   }
-  result.sort((a, b) => b.count - a.count);
+  result.sort((accountA, accountB) => accountB.count - accountA.count);
   if (result.length <= 5) {
     return result;
   } else {
@@ -49,11 +49,11 @@ function getMostCommonGenres(books) {
 
 function getMostPopularBooks(books) {
   let popularBooks = books
-    .map((elem) => ({
-      name: elem.title,
-      count: elem.borrows.length,
+    .map((book) => ({
+      name: book.title,
+      count: book.borrows.length,
     }))
-    .sort((a, b) => b.count - a.count);
+    .sort((accountA, accountB) => accountB.count - accountA.count);
   if (popularBooks.length <= 5) {
     return popularBooks;
   } else {
@@ -73,7 +73,7 @@ function getMostPopularAuthors(books, authors) {
           0
         ),
     }))
-    .sort((a, b) => b.count - a.count);
+    .sort((accountA, accountB) => accountB.count - accountA.count);
   if (popularAuthors.length <= 5) {
     return popularAuthors;
   } else {

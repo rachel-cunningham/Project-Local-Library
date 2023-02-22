@@ -17,9 +17,9 @@ function partitionBooksByBorrowedStatus(books) {
 
 function getBorrowersForBook(book, accounts) {
   const linkBorrowers = book.borrows.map((borrow) => {
-    let acc = accounts.find((account) => account.id === borrow.id);
-    acc["returned"] = borrow.returned;
-    return acc;
+    let account = accounts.find((account) => account.id === borrow.id);
+    account["returned"] = borrow.returned;
+    return account;
   });
   if (linkBorrowers.length <= 10) {
     return linkBorrowers;
