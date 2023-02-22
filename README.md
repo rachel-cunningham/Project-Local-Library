@@ -1,0 +1,1 @@
+# Project-Local-Library This project was to practiced using arrow functions, native array methods, JavaScript features including ternary operator and spread operator. To test the functions first install nmp and then nmp test. 
